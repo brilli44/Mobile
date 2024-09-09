@@ -88,7 +88,7 @@
 
     - !expression negasi atau kebalikan hasil ekspresi-yaitu, true menjadi false dan false menjadi true.
     - || menerapkan operasi logika OR antara dua ekspresi.
-    - && menerapkan operasi logika AND antara dua ekspresi.
+    - && menerapkan operasi logika AND antara dua ekspresi
 
 
 
