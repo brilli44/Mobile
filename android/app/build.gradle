@@ -1,0 +1,47 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.books"
+    compileSdk = 34 // Gunakan nilai eksplisit untuk compileSdk
+
+    defaultConfig {
+        applicationId = "com.example.books"
+        minSdk = 21 // Versi minimum SDK
+        targetSdk = 33 // Versi target SDK
+        versionCode = 1 // Versi aplikasi
+        versionName = "1.0" // Nama versi aplikasi
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildTypes {
+        release {
+            // Gunakan debug signing config untuk sekarang
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    // (Opsional) Tambahkan konfigurasi ndk jika diperlukan
+    ndkVersion = "25.1.8937393"
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.10.1" // Library AndroidX
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.7.10" // Library Kotlin
+}
